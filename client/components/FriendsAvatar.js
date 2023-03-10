@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function FriendsAvatar(props) {
     let width = 'w-12';
     let height = 'h-12';
@@ -8,7 +9,7 @@ export default function FriendsAvatar(props) {
     return(
         <>
             <div className={`${width} ${height} rounded-full overflow-hidden`}>
-                <img src={props.url}></img>
+                <Image alt='friends-avatar' src={props.url}></Image>
             </div>
         </>
     );

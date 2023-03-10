@@ -1,11 +1,12 @@
 import Card from "./Card";
+import Image from "next/image";
 export default function Sidebar() {
   return (
     <Card>
       <div className="px-4 py-2">
         <div className="flex border-bottom-solid border-b border-gray-300 gap-3">
              <div className="w-16 h-16 rounded-full overflow-hidden mb-2 mt-5">
-                <img src="https://images.unsplash.com/photo-1591084728795-1149f32d9866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"></img>
+                <Image alt='profile-photo' src="https://images.unsplash.com/photo-1591084728795-1149f32d9866?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"></Image>
              </div>
              <div className="grow flex py-4 pl-6 gap-14">
                  <div className="">

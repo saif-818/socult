@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Avatar from "./Avatar";
 import Card from "./Card";
+import Image from "next/image";
 export default function PostCard() {
   const [like, setlike] = useState(72);
   const [dislike, setdislike] = useState(5);
@@ -29,7 +30,7 @@ export default function PostCard() {
       <div>
         <p className="my-3 text-sm">
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
           scrambled it to make a type specimen book. It has survived not only
           five centuries, but also the leap into electronic typesetting,
@@ -38,7 +39,7 @@ export default function PostCard() {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"></img>
+        <Image alt='post-image' src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"></Image>
       </div>
       <div className="flex gap-4 mt-6 ml-2">
         <button className="flex gap-2 items-center" onClick={increaseLike}>

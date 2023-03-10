@@ -2,11 +2,14 @@ import { useRouter } from "next/router";
 import Card from "../../components/Card";
 import { profile } from "../../components/FollowCard";
 import FriendsAvatar from "../../components/FriendsAvatar";
+import Image from "next/image";
 
-export default function profileName() {
+
+export default function ProfileName() {
   const router = useRouter();
   const root = router.query.profileName;
   let imgPath = "";
+
   profile.map((item) => {
     if (root === item.name) imgPath = item.profileImg;
   });
@@ -15,7 +18,7 @@ export default function profileName() {
       <Card noPadding={true}>
         <div className="relative">
           <div className="h-36 overflow-hidden flex justify-center items-center">
-            <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"></img>
+            <Image alt="profile-banner" src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80"></Image>
           </div>
 
           <div className="absolute top-16 left-4">

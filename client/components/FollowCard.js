@@ -14,8 +14,8 @@ export function FollowCard(){
         <Card>
             <h1 className="font-semibold text-lg">Who to Follow</h1>
             { 
-                profile.map(item => 
-                   <div>
+                profile.map((item) => 
+                   <div key={item.name}>
                         <div className="grid gap-5 grid-cols-1 py-4">
                             <div className="flex gap-3">
                                 <FriendsAvatar url={item.profileImg}/>
